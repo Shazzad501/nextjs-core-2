@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-
+import style from './post.module.css'
 
 const MealsPage = () => {
   const [meal, setMeal] = useState([]);
@@ -32,8 +32,8 @@ const MealsPage = () => {
           meal?.map(singleMeal=>{
             return(
               <div className="border border-white p-5 rounded-lg">
-                <p className="text-lg font-bold">{singleMeal?.strMeal}</p>
-                <p className="text-base font-bold">{singleMeal?.strInstructions}</p>
+                <p className="text-lg font-bold test-row-css">{singleMeal?.strMeal}</p>
+                <p className={`text-base font-bold ${style['infile-css']}`}>{singleMeal?.strInstructions}</p>
               </div>
             );
           })
