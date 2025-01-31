@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import style from './post.module.css'
+import Image from "next/image";
 
 const MealsPage = () => {
   const [meal, setMeal] = useState([]);
@@ -32,6 +33,7 @@ const MealsPage = () => {
           meal?.map(singleMeal=>{
             return(
               <div key={singleMeal.idMeal} className="border border-white p-5 rounded-lg">
+                <Image src={singleMeal?.strMealThumb} width={641} height={641} alt={singleMeal?.strMeal} />
                 <p className="text-lg font-bold test-row-css">{singleMeal?.strMeal}</p>
                 <p className={`text-base font-bold ${style['infile-css']}`}>{singleMeal?.strInstructions}</p>
               </div>
