@@ -31,7 +31,7 @@ const MealsPage = () => {
         {
           meal?.map(singleMeal=>{
             return(
-              <div className="border border-white p-5 rounded-lg">
+              <div key={singleMeal.idMeal} className="border border-white p-5 rounded-lg">
                 <p className="text-lg font-bold test-row-css">{singleMeal?.strMeal}</p>
                 <p className={`text-base font-bold ${style['infile-css']}`}>{singleMeal?.strInstructions}</p>
               </div>
